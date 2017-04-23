@@ -265,7 +265,7 @@ void Manager::Main(PArgList &args)
 
     if (pauseBeforeDialing) {
         cout << "sleep 2000 ms to allow time for registration ... " << std::endl; 
-        PThread::Sleep(2000);
+        PThread::Sleep(500);
         cout << "Done!" << std::endl;
     }
 
@@ -311,6 +311,7 @@ bool Manager::Init(PArgList &args)
     // Parse various command line arguments
     args.Parse(
             "u-user:"
+	    "a-alias:"
             "c-password:"
             "l-localaddress:"
             "o-opallog:"
